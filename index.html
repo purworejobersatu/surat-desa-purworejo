@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pelayanan Surat Desa Purworejo</title>
     <style>
         body {
@@ -11,6 +12,7 @@
             background: url('sawah.jpeg') no-repeat center center fixed;
             background-size: cover;
         }
+
         header {
             background-color: #2E8B57;
             color: white;
@@ -19,37 +21,65 @@
             align-items: center;
             justify-content: center;
         }
+
         header img {
             height: 60px;
             margin-right: 15px;
         }
+
         table {
-            width: 70%;
+            width: 90%; /* Lebar tabel 90% dari lebar layar */
             margin: 20px auto;
             border-collapse: collapse;
-            background: rgba(255, 255, 255, 0.5); /* Semi-transparan putih */
-            backdrop-filter: blur(5px); /* Efek blur */
-            border-radius: 10px; /* Agar tabel lebih halus di sudutnya */
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
         }
+
         th, td {
             border: 1px solid #ccc;
             padding: 12px;
             text-align: center;
         }
+
         th {
             background-color: #4CAF50;
             color: white;
         }
+
         tr:hover {
             background-color: #f1f1f1;
         }
+
         a {
             text-decoration: none;
             color: #2E8B57;
             font-weight: bold;
         }
+
         a:hover {
             color: #008CBA;
+        }
+
+        /* Media Query untuk ukuran layar lebih kecil (HP) */
+        @media screen and (max-width: 768px) {
+            table {
+                width: 100%; /* Lebar tabel 100% di layar kecil */
+                margin: 10px;
+            }
+
+            th, td {
+                padding: 8px; /* Mengurangi padding di tabel untuk layar kecil */
+            }
+
+            header {
+                flex-direction: column; /* Mengatur header menjadi vertikal */
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 1.5em; /* Mengurangi ukuran font di header */
+            }
         }
     </style>
 </head>
